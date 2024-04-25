@@ -42,7 +42,7 @@ Example Test Case                        #2nd Test Case
     Select Checkbox     RememberMe                 #To select checkbox
     Click Element    xpath://button[text()="Log in"]
     Close Browser
-
+    
 
 *** Keywords ***
 Select Birth Date From Dropdown
