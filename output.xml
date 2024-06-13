@@ -1,54 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-24T15:44:10.384927" rpa="false" schemaversion="5">
-<suite id="s1" name="DropDowns" source="C:\Users\Rashmi.Ghaware\AutomationProject\pythonProject1\TestCases\DropDowns.robot">
-<test id="s1-t1" name="Handling DropDowns" line="11">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-06-13T14:39:15.404840" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Rashmi.Ghaware\AutomationProject\pythonProject1\TestCases1\Login.robot">
+<test id="s1-t1" name="LoginTest" line="12">
+<kw name="Open my browser" owner="LoginKeywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:44:10.579014" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2024-06-13T14:39:15.563877" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/login?returnUrl=%2F'.</msg>
+<msg time="2024-06-13T14:39:16.035395" level="WARN">The chromedriver version (124.0.6367.60) detected in PATH at C:\Users\Rashmi.Ghaware\AppData\Local\Programs\Python\Python312\~cripts\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.142); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-24T15:44:10.579014" elapsed="7.426515"/>
+<status status="PASS" start="2024-06-13T14:39:15.563877" elapsed="6.675256"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-24T15:44:18.006128" elapsed="0.204591"/>
+<status status="PASS" start="2024-06-13T14:39:22.239133" elapsed="0.031451"/>
 </kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:44:18.211979" level="INFO">Selecting options from selection list 'dropdown-class-example' by label Option1.</msg>
-<arg>dropdown-class-example</arg>
-<arg>Option1</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-04-24T15:44:18.210719" elapsed="0.092083"/>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2024-06-13T14:39:15.563877" elapsed="6.706707"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-24T15:44:23.304898" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-24T15:44:18.304263" elapsed="5.000635"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:44:23.304898" level="INFO">Selecting options from selection list 'dropdown-class-example' by value option2.</msg>
-<arg>dropdown-class-example</arg>
-<arg>option2</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-04-24T15:44:23.304898" elapsed="0.036161"/>
+<kw name="Click Username" owner="LoginKeywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T14:39:22.321796" level="INFO">Element 'xpath://input[@id="Email"]' is displayed.</msg>
+<arg>${txt_loginUserNAme}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T14:39:22.271586" elapsed="0.050210"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-24T15:44:28.341838" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-06-13T14:39:27.322001" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-24T15:44:23.341059" elapsed="5.000779"/>
+<status status="PASS" start="2024-06-13T14:39:22.321796" elapsed="5.000205"/>
 </kw>
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:44:28.341838" level="INFO">Selecting options from selection list 'dropdown-class-example' by index 3.</msg>
-<arg>dropdown-class-example</arg>
-<arg>3</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-04-24T15:44:28.341838" elapsed="0.075395"/>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${txt_loginUserNAme}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T14:39:27.322001" elapsed="0.044430"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:44:10.579014" elapsed="17.838219"/>
+<status status="PASS" start="2024-06-13T14:39:22.271586" elapsed="5.094845"/>
+</kw>
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${txt_loginUserNAme}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T14:39:27.367435" elapsed="0.010002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T14:39:27.377437" level="INFO">Typing text 'jon@gmail.com' into text field 'xpath://input[@id="Email"]'.</msg>
+<arg>${txt_loginUserNAme}</arg>
+<arg>${userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T14:39:27.377437" elapsed="0.064433"/>
+</kw>
+<arg>${User}</arg>
+<status status="PASS" start="2024-06-13T14:39:27.367435" elapsed="0.074435"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T14:39:27.441870" level="INFO">Typing text 'Test@123' into text field 'xpath://input[@id="Password"]'.</msg>
+<arg>${txt_password}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T14:39:27.441870" elapsed="0.067124"/>
+</kw>
+<arg>${Password}</arg>
+<status status="PASS" start="2024-06-13T14:39:27.441870" elapsed="0.067124"/>
+</kw>
+<kw name="Click Sign" owner="LoginKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T14:39:27.508994" level="INFO">Clicking button 'xpath://button[text()="Log in"]'.</msg>
+<arg>${button_LogIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T14:39:27.508994" elapsed="1.317266"/>
+</kw>
+<status status="PASS" start="2024-06-13T14:39:27.508994" elapsed="1.317266"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T14:39:31.826929" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T14:39:28.826260" elapsed="3.000669"/>
+</kw>
+<kw name="Close my browsers" owner="LoginKeywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-06-13T14:39:31.826929" elapsed="6.219285"/>
+</kw>
+<status status="PASS" start="2024-06-13T14:39:31.826929" elapsed="6.219285"/>
+</kw>
+<status status="PASS" start="2024-06-13T14:39:15.563877" elapsed="22.482337"/>
 </test>
-<status status="PASS" start="2024-04-24T15:44:10.400613" elapsed="18.016620"/>
+<status status="PASS" start="2024-06-13T14:39:15.404840" elapsed="22.645883"/>
 </suite>
 <statistics>
 <total>
@@ -57,9 +100,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="DropDowns">DropDowns</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-06-13T14:39:16.035395" level="WARN">The chromedriver version (124.0.6367.60) detected in PATH at C:\Users\Rashmi.Ghaware\AppData\Local\Programs\Python\Python312\~cripts\chromedriver.exe might not be compatible with the detected chrome version (125.0.6422.142); currently, chromedriver 125.0.6422.141 is recommended for chrome 125.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
